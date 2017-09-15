@@ -1,0 +1,227 @@
+#HomeMenu
+{
+  position:absolute; top:0px; left:0px;
+  border-radius: 20px 20px 20px 20px; 
+  border: none;
+  height: 50px;
+  width:  72px;
+  background-color: #CCFF66;
+  color: black; 
+  cursor: pointer;
+  font-size: 15px;
+  font-family: Arial;
+}
+
+#HomeMenu:hover
+{
+  background-color: #FF00FF;
+  color: white;
+  font-weight: bold; 
+}
+
+
+
+#StationMenu
+{
+  position:absolute; top:0px; left:85px;
+  border-radius: 20px 20px 20px 20px; 
+  border: none;
+  height: 50px;
+  width:  70px;
+  background-color: #CCFF66;
+  color: black; 
+  cursor: pointer;
+  font-size: 15px;
+  font-family: Arial;
+}
+
+#StationMenu:hover
+{
+  background-color: #FF00FF;
+  color: white;
+  font-weight: bold; 
+}
+
+
+
+#Prodct4Menu
+{
+  position:absolute; top:0px; left:170px;
+  border-radius: 20px 20px 20px 20px; 
+  border: none;
+  height: 50px;
+  width:  70px;
+  background-color: #CCFF66;
+  color: black; 
+  font-size: 15px;
+  font-family: Arial;
+}
+
+#Prodct4Menu:hover
+{
+  background-color: #FF00FF;
+  color: white;
+  font-weight: bold; 
+}
+
+
+
+
+#PurchaseMee1
+{
+  position:absolute; top:0px; left:255px;
+  border-radius: 20px 20px 20px 20px; 
+  border: none;
+  height: 50px;
+  width:  80px;
+  background-color: #CCFF66;
+  color: black; 
+  cursor: pointer;
+  font-size: 15px;
+  font-family: Arial;
+}
+
+#PurchaseMee1:hover
+{
+  background-color: #FF00FF;
+  color: white;
+  font-weight: bold; 
+}
+
+
+
+#StockMenu
+{
+  position:absolute; top:0px; left:350px;
+  border-radius: 20px 20px 20px 20px; 
+  border: none;
+  height: 50px;
+  width:  60px;
+  background-color: #CCFF66;
+  color: black; 
+  cursor: pointer;
+  font-size: 15px;
+  font-family: Arial;
+}
+
+#StockMenu:hover
+{
+  background-color: #FF00FF;
+  color: white;
+  font-weight: bold; 
+}
+
+
+
+#DailySalem1
+{
+  position:absolute; top:0px; left:425px;
+  border-radius: 20px 20px 20px 20px; 
+  border: none;
+  height: 50px;
+  width:  60px;
+  background-color: #CCFF66;
+  color: black; 
+  cursor: pointer;
+  font-size: 15px;
+  font-family: Arial;
+}
+
+#DailySalem1:hover
+{
+  background-color: #FF00FF;
+  color: white;
+  font-weight: bold; 
+}
+
+
+
+
+#CustomerMe6
+{
+  position:absolute; top:0px; left:500px;
+  border-radius: 20px 20px 20px 20px; 
+  border: none;
+  height: 50px;
+  width:  80px;
+  background-color: #CCFF66;
+  color: black; 
+  cursor: pointer;
+  font-size: 15px;
+  font-family: Arial;
+}
+
+#CustomerMe6:hover
+{
+  background-color: #FF00FF;
+  color: white;
+  font-weight: bold; 
+}
+
+
+
+
+#ExpensesMenu
+{
+  position:absolute; top:0px; left:690px;
+  border-radius: 20px 20px 20px 20px; 
+  border: none;
+  height: 50px;
+  width:  80px;
+  background-color: #CCFF66;
+  color: black; 
+  cursor: pointer;
+  font-size: 15px;
+  font-family: Arial;
+}
+
+#ExpensesMenu:hover
+{
+  background-color: #FF00FF;
+  color: white;
+  font-weight: bold; 
+}
+
+
+#ReportMenu
+{
+  position:absolute; top:0px; left:785px;
+  border-radius: 20px 20px 20px 20px; 
+  border: none;
+  height: 50px;
+  width:  70px;
+  background-color: #CCFF66;
+  color: black; 
+  cursor: pointer;
+  font-size: 15px;
+  font-family: Arial;
+}
+
+#ReportMenu:hover
+{
+  background-color: #FF00FF;
+  color: white;
+  font-weight: bold; 
+}
+
+
+#LogoutMenu
+{
+  position:absolute; top:0px; left:870px;
+  border-radius: 20px 20px 20px 20px; 
+  border: none;
+  height: 50px;
+  width:  70px;
+  background-color: #CCFF66;
+  color: black; 
+  cursor: pointer;
+  font-size: 15px;
+  font-family: Arial;
+}
+
+#LogoutMenu:hover
+{
+  background-color: #FF00FF;
+  color: white;
+  font-weight: bold; 
+}

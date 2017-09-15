@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <title> Employee Detail</title>
+	 
+	 <!-- include Bootstrap and jquery files-->
+	 <link rel="stylesheet" href="/Fyp/BootStrap/css/bootstrap.min.css">
+	 <script> <src="/Fyp/BootStrap/js/bootstrap.min.js"> </script> 
+	 <script> <src="/Fyp/BootStrap/js/jquery.js"> </script>
+	 
+	 
+	 <!-- All CSS Files -->
+	 <!-- style sheet of Menues div -->
+     <link rel="stylesheet" href="/Fyp/CSS FILES/0-HomePage/MenuDiv.css">
+	 <!-- style sheet of footer div Style -->
+	 <link rel="stylesheet" href="/Fyp/CSS FILES/8-EmployeeMenu/FooterOfEmp.css"> 
+	 <!-- style sheet of Allz menus -->
+	 <link rel="stylesheet" href="/Fyp/CSS FILES/8-EmployeeMenu/StylesOfMenus.css"> 
+	 <!-- style sheet of product menu-->
+	 <link rel="stylesheet" href="/Fyp/CSS FILES/8-EmployeeMenu/StyleOfEmplyeMenu.css">
+	 <!-- add and edit product div containers -->
+	 <link rel="stylesheet" href="/Fyp/CSS FILES/8-EmployeeMenu/Containers.css">
+	 
+	 
+	 <!-- javaScripts all functions -->
+	<script>
+	function openHomePage(){
+		 location.href = "/Fyp/HTML FILES/HomePage.html";
+	 }
+	 
+	 function openStationPage(){
+		 location.href = "/Fyp/HTML FILES/StationPage.html";
+		 }
+		
+	function openProductPage(){
+		 location.href = "/Fyp/HTML FILES/ProductPage.html";
+		 }
+	 
+	 function openPurchasePage(){
+		 location.href = "/Fyp/HTML FILES/PurchasePage.html";
+	 }
+	 
+	 function openStockPage(){
+		 location.href = "/Fyp/HTML FILES/StockPage.html";
+		 }
+	 
+	 function openDailySalePage(){
+		 location.href = "/Fyp/HTML FILES/DailySalePage.html";
+	 }
+	 
+	 
+	 function openCustomerPage(){
+		 location.href = "/Fyp/HTML FILES/CustomerPage.html";
+	 }
+	 
+	 function openExpensesPage(){
+		 location.href = "/Fyp/HTML FILES/ExpensesPage.html";
+	 }
+	 
+	  function openReportPage(){
+		 location.href = "/Fyp/HTML FILES/ReportPage.html";
+	 }
+	 
+	 function logout(){
+		 location.href = "/Fyp/LoginPage.html";
+	 }
+	 
+	 function addEmployee(){
+	  document.getElementById("manageEmployeeForm").style.display="none";
+      document.getElementById("AttendanceEmployeeForm").style.display="none";	  
+     document.getElementById("addEmployeeForm").style.display="block";
+      }
+	  
+	  function manageEmployee(){
+	  document.getElementById("addEmployeeForm").style.display="none";	
+     document.getElementById("AttendanceEmployeeForm").style.display="none"; 	  
+     document.getElementById("manageEmployeeForm").style.display="block";
+      }
+	  
+	  function updateEmployee(){
+	  document.getElementById("addEmployeeForm").style.display="none";	  
+     document.getElementById("manageEmployeeForm").style.display="none";
+	 document.getElementById("AttendanceEmployeeForm").style.display="block";
+      }
+	
+</script>
+    
+	 </head>
+
+
+	 
+<body>
+
+<!--Header Div -->
+<div class="jumbotron" style="background-color: #3b5998">
+<p style="position:absolute; top:12px; left: 460px; font-family: Segoe UI"> <font color="white"> <font size="6.5"><b> Petrol Pump Inventory System </b></font></font>
+</p></div>
+
+<!-- background color -->
+<body bgcolor="#f7f7f7">
+
+<!-- Side img pic-->
+<img src="/Fyp/Picx/sidePicx.jpg" style="width: 270px; height: 678px; position:absolute; top:96px; left:0px; border-radius: 0px 20px 20px 0px">
+
+
+<!-- Sales details div -->
+<div class="container"id="con1">
+  <div> Manage Employee </div><br>
+  
+  
+  <button type="button" class="btn btn-primary btn-lg btn-block" id="btn1"  onclick="addEmployee()"> Add Employee</button>
+   <button type="button" class="btn btn-primary btn-lg btn-block" id="btn3" onclick="updateEmployee()">Attendance </button>
+  <button type="button" class="btn btn-primary btn-lg btn-block" id="btn2" onclick="manageEmployee()">Manage Employee </button>
+  
+ 
+  </div>
+
+<!-- Employee result div -->
+<div class="container"id="con2">
+  <div>Employee Details</div>
+  
+</div>
+
+
+<!-- add Employee form-->
+<form id="addEmployeeForm" style="display:none">
+  <div class="container"id="con3">
+     <div> Add Employee</div><br><br>
+  <p style="text-align: left">
+  Employee id: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="empId" placeholder="Employee id" required><br></br>
+  Employee Name:&nbsp; &nbsp; <input type="text" id="empName" placeholder="Employee Name" required><br></br>
+  Father's Name: &nbsp; &nbsp; &nbsp; <input type="text" id="fName" placeholder="Father's Name" required><br></br>
+  Employee age: &nbsp; &nbsp; &nbsp; <input type="text" id="Eage" placeholder="Age" required><br></br>
+  Phone no: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="pNum" placeholder="Phone" required><br></br>
+  Email (optional): &nbsp; &nbsp; <input type="text" id="Ename" placeholder="Email Address (Optional)" required><br></br>
+  Address: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="Address" placeholder="Address" required><br></br>
+  Job Type:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="jobType" placeholder="Employee Job" required><br></br>
+  Employee Salary: &nbsp; <input type="text" id="eSalary" placeholder="Salary" required><br></br>
+  Date of Joining:&nbsp; &nbsp; &nbsp; <input type="text" id="dJoining" placeholder="Date of Joining" required><br></br></p>
+  <font color="black">
+  <input type="submit" value="Save" id="saveBtn">
+  <input type="reset" value="Clear" id="clearBtn">
+  <input type="submit" value="Close" id="closebtn"> </font>
+  </div>
+  </form>
+  
+ 
+<!-- manage Employee form-->
+<form id="manageEmployeeForm" style="display:none">
+  <div class="container"id="con4">
+     <div>Manage employee </div><br></br>
+  <p style="text-align: left">
+  Employee id: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="empId" placeholder="Employee id" required><br></br>
+  Employee Name:&nbsp; &nbsp; <input type="text" id="empName" placeholder="Employee Name" required><br></br>
+  Father's Name: &nbsp; &nbsp; &nbsp; <input type="text" id="fName" placeholder="Father's Name" required><br></br>
+  Employee age: &nbsp; &nbsp; &nbsp; <input type="text" id="Eage" placeholder="Age" required><br></br>
+  Phone no: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="pNum" placeholder="Phone" required><br></br>
+  Email (optional): &nbsp; &nbsp; <input type="text" id="Ename" placeholder="Email Address (Optional)"><br></br>
+  Address: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="Address" placeholder="Address" required><br></br>
+  Job Type:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="jobType" placeholder="Employee Job" required><br></br>
+  Employee Salary: &nbsp; <input type="text" id="eSalary" placeholder="Salary" required><br></br>
+  Date of Joining:&nbsp; &nbsp; &nbsp; <input type="text" id="dJoining" placeholder="Date of Joining" required><br></br>
+  Date of Leaving: &nbsp; &nbsp; <input type="text" id="dLeaving" placeholder="Leaving of Joining" required></p>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="radio" name="eD" value="Enabled"> Enabled
+  <input type="radio" name="eD" value="Disabled"> Disabled <br></br>
+  <font color="black">
+  <input type="submit" value="Update" id="updateBtn">
+  <input type="reset" value="Clear" id="clearBtn2">
+  <input type="submit" value="Close" id="closebtn2"> </font>  
+      </div>
+       </form>
+
+	 
+<!-- Attendance of Employee form-->
+<form id="AttendanceEmployeeForm" style="display:none">
+  <div class="container"id="con5">
+     <div>Attendance of Employee </div><br><br>
+  <p style="text-align: left">
+  Employee id: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="empId" placeholder="Employee id" required><br></br>
+  Employee Name:&nbsp; &nbsp; <input type="text" id="empName" placeholder="Employee Name" required><br></br>
+  Job Type:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="jobType" placeholder="Employee Job" required><br></br>
+  Employee Salary: &nbsp; <input type="text" id="toDayDate" placeholder="TodayDate" required><br></br>
+  Status:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  <select name="attendance">
+    <option value="Present">Present</option>
+    <option value="Absent">Absent</option>
+    <option value="Leave">Leave</option>
+  </select><br><br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  <font color="black">
+  <input type="submit" value="Okay" id="okBtn">
+  <input type="reset" value="Cancel" id="clearBtn3">
+  <input type="submit" value="Close" id="closebtn3"> </font>  
+     </div>>
+       </form>
+	 
+
+<!-- Menues -->
+<div id="MenuesDiv"> 
+
+ <!-- Home Menu -->
+<button id="HomeMenu" onclick="openHomePage()"> Home</button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:75px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Station Menu-->
+<button id="StationMenu" onclick="openStationPage()"> Station </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:160px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+
+<!-- Product menu-->
+<button id="Prodct4Menu" onclick="openProductPage()"> Product </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:245px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Purchase menu-->
+<button id="PurchaseMee1" onclick="openPurchasePage()"> Purchase </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:340px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Stock menu-->
+<button id="StockMenu" onclick="openStockPage()"> Stock </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:415px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Daily Sell menu-->
+<button id="DailySalem1" onclick="openDailySalePage()"> Sale </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:490px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Customer Account menu-->
+<button id="CustomerMe6" onclick="openCustomerPage()"> Customer</button>
+<!-- vertical line-->
+<p style="position:absolute; top:10px; left:585px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Employee menu-->
+<button id="EmployeeMenu1" disabled> Employee</button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:680px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Expenses menu-->
+<button id="ExpensesMenu" onclick="openExpensesPage()"> Expenses</button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:775px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Report menu-->
+<button id="ReportMenu" onclick="openReportPage()"> Report</button> 
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:860px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- logout menu-->
+<button id="LogoutMenu" onclick="logout()"> Logout</Button>
+
+</div>
+
+<!-- footer div -->
+<footer id="FooterOfEmployeePage">
+
+      <div class="container">
+	   <!-- Footer Menues -->
+      <br><br>
+ Help  &nbsp; &nbsp; About  &nbsp; &nbsp;  Contact us
+      </div>
+    </footer>
+
+</body>
+</html>

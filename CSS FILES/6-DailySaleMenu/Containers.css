@@ -1,0 +1,80 @@
+#btn1
+  {
+	  width: 160px;
+	  position: absolute; left: 130px;
+	  
+	  
+  }
+  
+  
+  
+#btn2
+  {
+	  
+	  width: 160px;
+	  position: absolute; top: 50px; left: 320px;
+	  
+	  
+  }
+  
+  
+  
+  
+#btnDiv{
+	
+	position: absolute; top:200px; left: 300px;
+	width: 600px;
+	height: 120px;
+	background-color: #EBEBE4;
+	text-align: center;
+	color: #3b5998;
+	box-shadow: 10px 10px 5px #888888;
+	font-size: 20px;
+}
+
+
+
+#dailySaleDiv{
+	
+	position: absolute; top:340px; left: 300px;
+	width: 600px;
+	height: 430px;
+	background-color: #EBEBE4;
+	text-align: center;
+	color: #FF00FF;
+	box-shadow: 10px 10px 5px #888888;
+	font-size: 12px;
+}
+
+
+
+#formDiv{
+	
+	position: absolute; top:200px; left: 920px;
+	width: 320px;
+	height: 575px;
+	background-color: #EBEBE4;
+	text-align: center;
+	color: #FF00FF;
+	box-shadow: 10px 10px 5px #888888;
+	font-size: 12px;
+}
+
+
+
+#cusFormDiv{
+	
+	position: absolute; top:200px; left: 920px;
+	width: 320px;
+	height: 450px;
+	background-color: #EBEBE4;
+	text-align: center;
+	color: #FF00FF;
+	box-shadow: 10px 10px 5px #888888;
+	font-size: 12px;
+}
+
+
+
+
+

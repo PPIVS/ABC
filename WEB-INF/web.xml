@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE xml>
+<web-app>
+<servlet>
+<servlet-name>OpenHomePageServlet</servlet-name>
+<servlet-class>OpenHomePageServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>OpenHomePageServlet</servlet-name>
+<url-pattern>/HomePage</url-pattern>
+</servlet-mapping>
+
+</web-app>
+
+
+

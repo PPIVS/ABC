@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <title> Stock </title>
+	 
+	 <!-- include Bootstrap and jquery files-->
+	 <link rel="stylesheet" href="/Fyp/BootStrap/css/bootstrap.min.css">
+	 <script> <src="/Fyp/BootStrap/js/bootstrap.min.js"> </script> 
+	 <script> <src="/Fyp/BootStrap/js/jquery.js"> </script>
+	 
+	 
+	 <!-- All CSS Files -->
+	 <!-- style sheet of Menues div -->
+     <link rel="stylesheet" href="/Fyp/CSS FILES/0-HomePage/MenuDiv.css">
+	 <!-- style sheet of footer div Style -->
+	 <link rel="stylesheet" href="/Fyp/CSS FILES/0-HomePage/FooterMenu.css"> 
+	 <!-- style sheet of Allz menus -->
+	 <link rel="stylesheet" href="/Fyp/CSS FILES/5-StockMenu/StylesOfMenus.css"> 
+	 <!-- style sheet of product menu-->
+	 <link rel="stylesheet" href="/Fyp/CSS FILES/5-StockMenu/StyleOfStock.css">
+	 <!-- add and edit product div containers -->
+	 <link rel="stylesheet" href="/Fyp/CSS FILES/5-StockMenu/Containers.css">
+	 
+	 
+	 <!-- java script all functions -->
+	<script>
+	function openHomePage(){
+		 location.href = "/Fyp/HTML FILES/HomePage.html";
+		 }
+	 
+	 function openStationPage(){
+		 location.href = "/Fyp/HTML FILES/StationPage.html";
+		 }
+	
+	 function openProductPage(){
+		 location.href = "/Fyp/HTML FILES/ProductPage.html";
+	 }
+	 
+	 function openPurchasePage(){
+		 location.href = "/Fyp/HTML FILES/PurchasePage.html";
+	 }
+	 
+	 function openDailySalePage(){
+		 location.href = "/Fyp/HTML FILES/DailySalePage.html";
+	 }
+	 
+	 function openCustomerPage(){
+		 location.href = "/Fyp/HTML FILES/CustomerPage.html";
+	 }
+	 
+	 function openEmployeePage(){
+		 location.href = "/Fyp/HTML FILES/EmployeePage.html";
+	 }
+	 
+	 function openExpensesPage(){
+		 location.href = "/Fyp/HTML FILES/ExpensesPage.html";
+	 }
+	 
+	  function openReportPage(){
+		 location.href = "/Fyp/HTML FILES/ReportPage.html";
+	 }
+	 
+	 function logout(){
+		 location.href = "/Fyp/LoginPage.html";
+	 }
+	 
+	 </script>
+	 
+	 
+	 </head>
+
+	 	 
+<body>
+<!--Header Div -->
+<div class="jumbotron" style="background-color: #3b5998">
+<p style="position:absolute; top:12px; left: 460px; font-family: Segoe UI"> <font color="white"> <font size="6.5"><b> Petrol Pump Inventory System </b></font></font>
+</p></div>
+
+<!-- background color -->
+<body bgcolor="#f7f7f7">
+
+<!-- Side img pic-->
+<img src="/Fyp/Picx/sidePicx.jpg" style="width: 270px; height: 510px; position:absolute; top:96px; left:0px; border-radius: 0px 20px 20px 0px">
+
+
+<!-- Stock details div -->
+<div class="container"id="availableStock">
+  <div> Avaiable Stock </div><br>
+  <pre style="text-align: left">
+  Petrol                       						LTR
+  
+  
+  
+  Diesel                      						LTR
+  
+  </pre>
+  </div>
+
+ 
+
+<!-- Menues -->
+<div id="MenuesDiv"> 
+
+ <!-- Home Menu -->
+
+<button id="HomeMenu" onclick="openHomePage()"> Home </button>
+
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:75px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Station Menu-->
+<button id="StationMenu" onclick="openStationPage()"> Station </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:160px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Product menu-->
+<button id="ProdctMenu" onclick="openProductPage()">Product </button> 
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:245px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Purchase menu-->
+<button id="PurchaseMenu" onclick="openPurchasePage()"> Purchase </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:340px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+
+<!-- Stock menu-->
+<button id="StockMenu" disabled>Stock </button> 
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:415px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+
+<!-- Daily Sell menu-->
+<button id="DailySellMenu" onclick="openDailySalePage()"> Sale </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:490px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Customer Account menu-->
+<button id="CustomerMenu" onclick="openCustomerPage()"> Customer </button>
+<!-- vertical line -->
+<p style="position:absolute; top:10px; left:585px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Employee menu-->
+<button id="EmployeeMenu" onclick="openEmployeePage()"> Employee </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:680px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+
+<!-- Expenses menu-->
+<button id="ExpensesMenu" onclick="openExpensesPage()"> Expenses </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:775px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+
+<!-- Report menu-->
+<button id="ReportMenu" onclick="openReportPage()"> Report </button> 
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:860px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+
+<!-- logout menu-->
+<button id="LogoutMenu" onclick="logout()">Logout </button> 
+
+</div>
+<!-- End of Menu -->
+
+
+<!-- footer div -->
+<footer id="FooterOfHomePage">
+
+      <div class="container">
+	   <!-- Footer Menues -->
+      <br><br>
+ Help  &nbsp; &nbsp; About  &nbsp; &nbsp;  Contact us
+      </div>
+    </footer>
+
+	
+</body>
+</html>

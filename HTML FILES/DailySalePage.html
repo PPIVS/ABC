@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <title> Daily Sale </title>
+	 
+	 <!-- include Bootstrap and jquery files-->
+	 <link rel="stylesheet" href="/Fyp/BootStrap/css/bootstrap.min.css">
+	 <script> <src="/Fyp/BootStrap/js/bootstrap.min.js"> </script> 
+	 <script> <src="/Fyp/BootStrap/js/jquery.js"> </script>
+	 
+	 
+	 <!-- All CSS Files -->
+	 <!-- style sheet of Menues div -->
+     <link rel="stylesheet" href="/Fyp/CSS FILES/0-HomePage/MenuDiv.css">
+	 <!-- style sheet of footer div Style -->
+	 <link rel="stylesheet" href="/Fyp/CSS FILES/6-DailySaleMenu/FooterOfPage.css"> 
+	 <!-- style sheet of Allz menus -->
+	 <link rel="stylesheet" href="/Fyp/CSS FILES/6-DailySaleMenu/StylesOfMenus.css"> 
+	 <!-- style sheet of product menu-->
+	 <link rel="stylesheet" href="/Fyp/CSS FILES/6-DailySaleMenu/StyleOfSaleMenu.css">
+	 <!-- add and edit product div containers -->
+	 <link rel="stylesheet" href="/Fyp/CSS FILES/6-DailySaleMenu/Containers.css">
+	 
+	 <!-- java script all functions -->
+	<script>
+	function openHomePage(){
+		 location.href = "/Fyp/HTML FILES/HomePage.html";
+		 }
+		 
+	 function openStationPage(){
+		 location.href = "/Fyp/HTML FILES/StationPage.html";
+		 }	 
+	 
+	 function openProductPage(){
+		 location.href = "/Fyp/HTML FILES/ProductPage.html";
+	 }
+	 
+	 function openPurchasePage(){
+		 location.href = "/Fyp/HTML FILES/PurchasePage.html";
+	 }
+	 
+	 function openStockPage(){
+		 location.href = "/Fyp/HTML FILES/StockPage.html";
+	 }
+	 
+	 
+	 function openCustomerPage(){
+		 location.href = "/Fyp/HTML FILES/CustomerPage.html";
+	 }
+	 
+	 
+	 function openEmployeePage(){
+		 location.href = "/Fyp/HTML FILES/EmployeePage.html";
+	 }
+	 
+	 
+	 function openExpensesPage(){
+		 location.href = "/Fyp/HTML FILES/ExpensesPage.html";
+	 }
+	 
+	 function openReportPage(){
+		 location.href = "/Fyp/HTML FILES/ReportPage.html";
+	 }
+	 
+	 function logout(){
+		 location.href = "/Fyp/LoginPage.html";
+	 }
+	 
+	 function saleDetailDiv(){	  
+	 document.getElementById("CustomerSaleForm").style.display="none";
+     document.getElementById("formDiv").style.display="block";
+      }
+	  
+	  function petrolSaleForm(){
+     document.getElementById("dieselSaleForm").style.display="none";    
+  	  document.getElementById("CustomerSaleForm").style.display="none";
+     document.getElementById("petrolSaleForm").style.display="block";
+	  
+      }
+	  
+	  function dieselSaleForm(){
+      document.getElementById("petrolSaleForm").style.display="none";
+      document.getElementById("CustomerSaleForm").style.display="none";	  
+     document.getElementById("dieselSaleForm").style.display="block";
+	 
+      }
+	  
+	  function custSaleForm(){
+      document.getElementById("petrolSaleForm").style.display="none";		  
+     document.getElementById("dieselSaleForm").style.display="none";
+	 document.getElementById("formDiv").style.display="none";
+	 document.getElementById("CustomerSaleForm").style.display="block";
+      }
+	  
+	  
+	 </script>
+	 </head>
+
+
+	 
+<body>
+
+<!--Header Div -->
+<div class="jumbotron" style="background-color: #3b5998">
+<p style="position:absolute; top:12px; left: 460px; font-family: Segoe UI"> <font color="white"> <font size="6.5"><b> Petrol Pump Inventory System </b></font></font>
+</p></div>
+
+<!-- background color -->
+<body bgcolor="#f7f7f7">
+
+<!-- Side img pic-->
+<img src="/Fyp/Picx/sidePicx.jpg" style="width: 270px; height: 698px; position:absolute; top:96px; left:0px; border-radius: 0px 20px 20px 0px">
+
+
+<!-- Sale details div -->
+<div class="container"id="btnDiv">
+  <div> Daily Sale </div><br>
+  <button type="button" class="btn btn-primary btn-lg btn-block" id="btn1" onclick="saleDetailDiv()"> Daily Sale </button>
+  <button type="button" class="btn btn-primary btn-lg btn-block" id="btn2" onclick="custSaleForm()"> Customer Sale </button>
+  </div>
+
+  <!-- Sale result div -->
+<div class="container"id="dailySaleDiv">
+  <div>Daily Sale Detail</div>
+</div>
+
+<!-- Petrol Sale Form-->
+      <div class="container"id="formDiv" style="display: none">
+     <div> Select Sale details </div>
+	 <font color="black">
+	 <button onclick="petrolSaleForm()"> Petrol </button>
+	 <button onclick="dieselSaleForm()"> Diesel </button>
+	 </font>
+	 <form id="petrolSaleForm" style="display:none">     
+	 <p style="text-align: left">
+	 <br></br>
+     Date: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="salingDate" placeholder="Date" required><br></br>
+	 Select Shift: &nbsp; &nbsp; &nbsp; &nbsp;
+	 <select name="selectShift">
+	 <option value="none">None</option>
+     <option value="day">Day</option>
+     <option value="night">Night</option>
+     </select>
+	 <br></br>
+	 
+	 Select Machine: &nbsp;
+	 <select name="selectMachine">
+	 <option value="none1">None</option>
+     <option value="abc1"> Machine 1</option>
+     <option value="abc2"> Machine 2</option>
+     </select>
+	 <br></br>
+	 
+	 Select Pistol:&nbsp; &nbsp; &nbsp; &nbsp;
+	 <select name="selectPistol">
+	 <option value="none2">None</option>
+     <option value="p1"> Machine 1 Pistol 1</option>
+     <option value="p2"> Machine 2 Pistol 2</option>
+     </select>
+	 <br></br>
+	 
+	 Employee Id:&nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="empId" placeholder="Employee id" required><br></br>
+     Employee Name:&nbsp; <input type="text" id="empName" placeholder="Employee Name" required><br></br>
+     Rate: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="petrolRate" placeholder=" Petrol Rate in Ltrs" required><br></br>
+	 S. Meter Reading: <input type="text" id="sMeterReading" placeholder="S. Meter Reading" required><br></br>
+	 C. Meter Reading: <input type="text" id="cMeterReading" placeholder="C. Meter Reading" required><br></br>
+	 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     <font color="black">
+	 <button> Calculate </button>
+     <button> Clear </button>
+     </font><br><br>
+   	 Total Sale: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="totalSale" placeholder="Total Sale" required><br></br>
+     Total Amount: &nbsp; &nbsp; &nbsp; <input type="text" id="totalAmount" placeholder=" Total Amount" required></p>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     <font color="black">
+     <input type="submit" value="Submit" id="submitBtn">
+     <input type="reset" value="Clear" id="clearBtn">
+     <input type="submit" value="Close" id="closebtn"> </font>  
+       </form>
+	 </div>
+	 
+	 
+	 <!-- Diesel Sale Form-->
+      <form id="dieselSaleForm" style="display:none">
+     <div class="container"id="formDiv">
+     <div> Select Sale details </div>
+	 <font color="black">
+	 <button onclick="petrolSaleForm()"> Petrol </button>
+	 <button onclick="dieselSaleForm()"> Diesel </button>
+	 </font>     
+	 <p style="text-align: left">
+	 <br></br>
+     Date: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="salingDate1" placeholder="Date" required><br></br>
+	 Select Shift: &nbsp; &nbsp; &nbsp; &nbsp;
+	 <select name="selectShift1">
+	 <option value="none1">None</option>
+     <option value="day">Day</option>
+     <option value="night">Night</option>
+     </select>
+	 <br></br>
+	 
+	 Select Machine: &nbsp;
+	 <select name="selectMachine1">
+	 <option value="none1">None</option>
+     <option value="abc"> Machine 1</option>
+     <option value="abc"> Machine 2</option>
+     </select>
+	 <br></br>
+	 
+	 Select Pistol:&nbsp; &nbsp; &nbsp; &nbsp;
+	 <select name="selectPistol">
+	 <option value="none2">None</option>
+     <option value="p1"> Machine 1 Pistol 1</option>
+     <option value="p2"> Machine 2 Pistol 2</option>
+     </select>
+	 <br><br>
+	 
+	 Employee Id:&nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="empId" placeholder="Employee id" required><br></br>
+     Employee Name:&nbsp; <input type="text" id="empName" placeholder="Employee Name" required><br></br>
+     Rate: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="dieselRate" placeholder=" Diesel Rate in Ltrs" required><br></br>
+	 S. Meter Reading: <input type="text" id="sMeterReading" placeholder="S. Meter Reading" required><br></br>
+	 C. Meter Reading: <input type="text" id="cMeterReading" placeholder="C. Meter Reading" required><br></br>
+	 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     <font color="black">
+	 <button> Calculate </button>
+     <button> Clear </button>
+     </font><br><br>	 
+	 Total Sale: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="totalSale" placeholder="Total Sale" required><br></br>
+     Total Amount: &nbsp; &nbsp; &nbsp; <input type="text" id="totalAmount" placeholder=" Total Amount" required></p>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     <font color="black">
+     <input type="submit" value="Submit" id="submitBtn">
+     <input type="reset" value="Clear" id="clearBtn">
+     <input type="submit" value="Close" id="closebtn"> </font>  
+       </div>
+       </form>
+	 
+	 
+	 <!-- Customer Sale Form-->
+      <form id="CustomerSaleForm" style="display:none">
+     <div class="container"id="cusFormDiv">
+     <div> Customer Sales details </div>
+	 <p style="text-align: left">
+	 <br></br>
+     Date: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="salingDate1" placeholder="Date" required><br></br>
+	 Bill No:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="billNo" placeholder="Bill Number" required><br></br>
+     Customer Name:&nbsp; <input type="text" id="custName" placeholder="Customer Name" required><br></br>
+     Quantity: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="quantity" placeholder=" Quantity in Ltrs" required><br></br>
+	 Price:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="pricePrLTR" placeholder="Price pr ltr" required><br></br>
+	 Total Amount: &nbsp; &nbsp; &nbsp;  <input type="text" id="totalAmount" placeholder="Total Amount" required><br></br>
+	 Cash Recieved:&nbsp; &nbsp; <input type="text" id="cashRecieved" placeholder="Total Cash Recieved" required><br></br>
+     Remaining cash: &nbsp;  <input type="text" id="remCash" placeholder=" Remaining Cash" required></p><br></br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     <font color="black">
+     <input type="submit" value="Submit" id="submitBtn">
+     <input type="reset" value="Clear" id="clearBtn">
+     <input type="submit" value="Close" id="closebtn"> </font>  
+     </div>
+     </form>
+	 
+
+<!-- Menues -->
+<div id="MenuesDiv"> 
+
+ <!-- Home Menu -->
+
+<button id="HomeMenu" onclick="openHomePage()"> Home </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:75px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Station Menu-->
+<button id="StationMenu" onclick="openStationPage()"> Station </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:160px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+
+<!-- Product menu-->
+<button id="Prodct3Menu" onclick="openProductPage()"> Product </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:245px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+
+<!-- Purchase menu-->
+<button id="PurchaseMee" onclick="openPurchasePage()"> Purchase </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:340px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+
+<!-- Stock menu-->
+<button id="StockMenu" onclick="openStockPage()"> Stock </button> 
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:415px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Daily Sale menu-->
+<button id="DailySell" disabled> Sale </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:490px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Customer Account menu-->
+<button id="CustomerMenu" onclick="openCustomerPage()"> Customer </button>
+<!-- vertical line -->
+<p style="position:absolute; top:10px; left:585px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Employee menu-->
+<button id="EmployeeMenu" onclick="openEmployeePage()"> Employee </button> 
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:680px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Expenses menu-->
+<button id="ExpensesMenu" onclick="openExpensesPage()"> Expenses </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:775px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+
+<!-- Report menu-->
+<button id="ReportMenu" onclick="openReportPage()"> Report </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:860px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- logout menu-->
+<button id="LogoutMenu" onclick="logout()"> Logout </button>
+
+</div>
+<!-- End of Menu -->
+
+
+<!-- footer div -->
+<footer id="FooterOfPage">
+
+      <div class="container">
+      
+	   <!-- Footer Menu -->
+      <br><br>
+ Help  &nbsp; &nbsp; About  &nbsp; &nbsp;  Contact us
+      </div>
+    </footer>
+
+	
+</body>
+</html>

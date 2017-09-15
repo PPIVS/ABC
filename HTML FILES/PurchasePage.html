@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <title> Purchase </title>
+	 
+	 <!-- include Bootstrap and jquery files-->
+	 <link rel="stylesheet" href="/Fyp/BootStrap/css/bootstrap.min.css">
+	 <script> <src="/Fyp/BootStrap/js/bootstrap.min.js"> </script> 
+	 <script> <src="/Fyp/BootStrap/js/jquery.js"> </script>
+	 
+	 
+	 <!-- All CSS Files -->
+	 <!-- style sheet of Menues div -->
+     <link rel="stylesheet" href="/Fyp/CSS FILES/0-HomePage/MenuDiv.css">
+	 <!-- style sheet of footer div Style -->
+	 <link rel="stylesheet" href="/Fyp/CSS FILES/0-HomePage/FooterMenu.css"> 
+	 <!-- style sheet of Allz menus -->
+	 <link rel="stylesheet" href="/Fyp/CSS FILES/4-PurchaseMenu/StylesOfMenus.css"> 
+	 <!-- style sheet of product menu-->
+	 <link rel="stylesheet" href="/Fyp/CSS FILES/4-PurchaseMenu/StyleOfPurchase.css">
+	 <!-- add and edit product div containers -->
+	 <link rel="stylesheet" href="/Fyp/CSS FILES/4-PurchaseMenu/Containers.css">
+	 
+	 
+	 <!-- java script all functions -->
+	<script>
+	function openHomePage(){
+		 location.href = "/Fyp/HTML FILES/HomePage.html";
+		 }
+		 
+	function openStationPage(){
+		 location.href = "/Fyp/HTML FILES/StationPage.html";
+		 }
+		 
+	 
+	 function openProductPage(){
+		 location.href = "/Fyp/HTML FILES/ProductPage.html";
+	 }
+	 
+	 function openStockPage(){
+		 location.href = "/Fyp/HTML FILES/StockPage.html";
+	 }
+	 
+	 function openDailySalePage(){
+		 location.href = "/Fyp/HTML FILES/DailySalePage.html";
+	 }
+	 
+	 
+	 function openCustomerPage(){
+		 location.href = "/Fyp/HTML FILES/CustomerPage.html";
+	 }
+	 
+	 
+	 function openEmployeePage(){
+		 location.href = "/Fyp/HTML FILES/EmployeePage.html";
+	 }
+	 
+	 
+	 function openExpensesPage(){
+		 location.href = "/Fyp/HTML FILES/ExpensesPage.html";
+	 }
+	 
+	  function openReportPage(){
+		 location.href = "/Fyp/HTML FILES/ReportPage.html";
+	 }
+	 
+	 function logout(){
+		 location.href = "/Fyp/LoginPage.html";
+	 }
+	 
+	 function newOrder(){	  
+     document.getElementById("con3").style.display="block";
+      }
+	  
+	  function orderPetrol(){
+     document.getElementById("dieselForm").style.display="none";
+     document.getElementById("lubricantForm").style.display="none";		 
+     document.getElementById("petrolForm").style.display="block";
+      }
+	  
+	  function orderDiesel(){	
+      document.getElementById("petrolForm").style.display="none";
+      document.getElementById("lubricantForm").style.display="none";		  
+     document.getElementById("dieselForm").style.display="block";
+      }
+	  
+	  function orderLub(){	
+      document.getElementById("petrolForm").style.display="none";	  
+     document.getElementById("dieselForm").style.display="none";
+	  document.getElementById("lubricantForm").style.display="block";	
+      }
+	  
+	  
+	  function displayNone(){	
+	   document.getElementById("con3").style.display="none";
+      document.getElementById("petrolForm").style.display="none";	  
+     document.getElementById("dieselForm").style.display="none";
+	  document.getElementById("lubricantForm").style.display="none";	
+      }
+	  
+	  function showNewOrderDiv(){
+	 document.getElementById("pendOrderDiv").style.display="none";
+     document.getElementById("preOrderDiv").style.display="none";	 	 
+	 document.getElementById("newOrderDiv").style.display="block";
+	  }
+		 
+	  function showPendingDiv(){
+	 document.getElementById("newOrderDiv").style.display="none";
+	  document.getElementById("preOrderDiv").style.display="none";	
+     document.getElementById("pendOrderDiv").style.display="block";	 
+	  }
+	  
+	  
+	  function showPreDiv(){
+	 document.getElementById("newOrderDiv").style.display="none";
+	 document.getElementById("pendOrderDiv").style.display="none";	 
+	 document.getElementById("preOrderDiv").style.display="block";
+	  }
+
+      
+	  </script>
+	 
+	 </head>
+
+
+	 
+<body>
+
+<!--Header Div -->
+<div class="jumbotron" style="background-color: #3b5998">
+<p style="position:absolute; top:12px; left: 460px; font-family: Segoe UI"> <font color="white"> <font size="6.5"><b> Petrol Pump Inventory System </b></font></font>
+</p></div>
+
+<!-- background color -->
+<body bgcolor="#f7f7f7">
+
+<!-- Side img pic-->
+<img src="/Fyp/Picx/sidePicx.jpg" style="width: 270px; height: 510px; position:absolute; top:96px; left:0px; border-radius: 0px 20px 20px 0px">
+
+
+<!-- Purchase details div -->
+<div class="container"id="btnDiv">
+  <div> Manage Purchasing </div><br>
+  <button type="button" class="btn btn-primary btn-lg btn-block" id="btn1" onclick="newOrder(),showNewOrderDiv()">New Order</button>
+  <button type="button" class="btn btn-primary btn-lg btn-block" id="btn2" onclick="displayNone(),showPendingDiv()">Pending Order</button>
+  <button type="button" class="btn btn-primary btn-lg btn-block" id="btn3" onclick="displayNone(), showPreDiv()">Previous Order</button>
+  </div>
+
+  
+  <!-- New order result div -->
+<div class="container"id="newOrderDiv" style="display: block">
+  <div> New Order will show over here </div>
+</div>
+
+
+<!-- Pending order result div -->
+<div class="container"id="pendOrderDiv" style="display: none">
+  <div> Pending Order will show over here </div>
+</div>
+
+
+<!-- previous result div -->
+<div class="container"id="preOrderDiv" style="display: none">
+  <div> Previous Orders will show over here</div>
+</div>
+
+
+<!-- Petrol Order Form-->
+      <div class="container"id="con3" style="display: none">
+     <div> Select Order</div>
+	 <font color="black">
+	 <button onclick="orderPetrol()"> Petrol </button>
+	 <button onclick="orderDiesel()"> Diesel </button>
+	 <button onclick="orderLub()"> Lubricants </button><br></br>
+	 </font>
+	 <form id="petrolForm" style="display:none">     
+	 <p style="text-align: left">
+     Order date: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="orderDate" placeholder="Order date" required><br></br>
+     Product Name: &nbsp; &nbsp; <input type="text" id="pName" placeholder="Product Name" required><br></br>
+     Quantity: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="quantity" placeholder="Quantity in Ltrs" required><br></br>
+     Rate: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="petrolRate" placeholder="Rate in Ltrs" required><br></br>
+	 Select Company:&nbsp;
+	 <select name="selectComp">
+     <option value="PSO">PSO</option>
+     <option value="Shell">Shell</option>
+     <option value="Caltex">Caltex</option>
+     </select><br><br><br><br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     <font color="black">
+     <input type="submit" value="Submit" id="submitBtn">
+     <input type="reset" value="Clear" id="clearBtn">
+     <input type="submit" value="Close" id="closebtn"> </font>  
+       </form>
+	 </div>
+	 
+	  <!-- Diesel Order Form-->
+      <form id="dieselForm" style="display:none">   
+       <div class="container"id="con3">
+     <div> Select Order</div>
+	 <font color="black">
+	 <button onclick="orderPetrol()"> Petrol </button>
+	 <button onclick="orderDiesel()"> Diesel </button>
+	 <button onclick="orderLub()"> Lubricants </button><br></br>
+	 </font>	  
+	 <p style="text-align: left">
+     Order date: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="orderDate" placeholder="Order date1" required><br></br>
+     Product Name: &nbsp; &nbsp; <input type="text" id="pName1" placeholder="Product Name" required><br></br>
+     Quantity: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="quantity1" placeholder="Quantity in Ltrs" required><br></br>
+     Rate: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="DieselRate" placeholder="Rate in Ltrs" required><br></br>
+	 Select Company:&nbsp;
+	 <select name="selectComp">
+     <option value="PSO">PSO</option>
+     <option value="Shell">Shell</option>
+     <option value="Caltex">Caltex</option>
+     </select><br><br><br><br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     <font color="black">
+     <input type="submit" value="Submit" id="submitBtn1">
+     <input type="reset" value="Clear" id="clearBtn1">
+     <input type="submit" value="Close" id="closebtn1"> </font>  
+     </p>
+     </div>
+       </form>
+	 
+	  <!-- Lubricants Order Form-->
+	 <form id="lubricantForm" style="display:none">  
+      <div class="container"id="con3">
+     <div> Select Order</div>
+	 <font color="black">
+	 <button onclick="orderPetrol()"> Petrol </button>
+	 <button onclick="orderDiesel()"> Diesel </button>
+	 <button onclick="orderLub()"> Lubricants </button><br></br>
+	 </font>
+	 <p style="text-align: left">
+     Order date: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="orderDate2" placeholder="Order date" required><br></br>
+     Lubricant Name: &nbsp; &nbsp; <input type="text" id="lubName" placeholder="Lubricant Name" required><br></br>
+     Lubricant type:&nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="lubtype" placeholder="Lubricant Type" required><br></br>
+     Rate: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="lubRate" placeholder="Rate in Ltrs" required><br></br>
+	 <br><br><br><br>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     <font color="black">
+     <input type="submit" value="Submit" id="submitBtn2">
+     <input type="reset" value="Clear" id="clearBtn2">
+     <input type="submit" value="Close" id="closebtn2"> </font>  
+       </p>
+       </div>
+       </form>
+	   
+
+<!-- Menues -->
+<div id="MenuesDiv"> 
+
+ <!-- Home Menu -->
+
+<button id="HomeMenu" onclick="openHomePage()">Home </button> 
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:75px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Station Menu-->
+<button id="StationMenu" onclick="openStationPage()"> Station </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:160px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+
+<!-- Product menu-->
+<button id="Prodct3Menu" onclick="openProductPage()"> Product </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:245px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+
+<!-- Purchase menu-->
+<button id="PurchaseMe" disabled> Purchase </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:340px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+
+<!-- Stock menu-->
+<button id="StockMenu" onclick="openStockPage()"> Stock</button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:415px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Sale menu-->
+<button id="DailySellMenu" onclick="openDailySalePage()"> Sale </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:490px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Customer Account menu-->
+<button id="CustomerMenu" onclick="openCustomerPage()"> Customer </button>
+<!-- vertical line -->
+<p style="position:absolute; top:10px; left:585px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Employee menu-->
+<button id="EmployeeMenu" onclick="openEmployeePage()"> Employee  </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:680px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+<!-- Expenses menu-->
+<button id="ExpensesMenu" onclick="openExpensesPage()"> Expenses </button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:775px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+
+<!-- Report menu-->
+<button id="ReportMenu" onclick="openReportPage()"> Report</button>
+<!-- vertical line -->  
+<p style="position:absolute; top:10px; left:860px; font-wieght: bold; font-size: 20px"> |
+</p>
+
+
+<!-- logout menu-->
+<button id="LogoutMenu" onclick="logout()"> Logout </button>
+
+</div>
+<!-- End of Menu -->
+
+
+<!-- footer div -->
+<footer id="FooterOfHomePage">
+
+      <div class="container">
+	   <!-- Footer Menues -->
+      <br><br>
+ Help  &nbsp; &nbsp; About  &nbsp; &nbsp;  Contact us
+      </div>
+    </footer>
+
+</body>
+</html>

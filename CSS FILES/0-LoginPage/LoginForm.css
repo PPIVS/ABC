@@ -1,0 +1,34 @@
+#username
+{
+color: black; 
+ position:absolute; top:41px; left:800px; 
+ width: 150px;
+ height: 23px;
+ font-size: 12px;
+}
+
+
+#pass
+{
+ color: black;  position:absolute; top:41px; left:970px; 
+ width: 150px;
+ height: 23px;
+ font-size: 12px; 
+}
+
+
+#Loginbtn
+{
+  position:absolute; top:38px; left:1134px;
+  border-color: #3b5998; 
+  height: 27px;
+  background-color: #8b9dc3;
+  color: white; 
+  cursor: pointer;
+}
+
+#Loginbtn:hover
+{
+  background-color: #3b5998;
+  color: white;
+}

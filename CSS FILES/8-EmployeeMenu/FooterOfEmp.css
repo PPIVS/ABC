@@ -1,0 +1,8 @@
+#FooterOfEmployeePage{
+ background-color: #3b5998;
+ width : 100%; 
+ height: 90px; 
+ bottom: -170px;
+ position:absolute;
+ text-align: center;
+}
